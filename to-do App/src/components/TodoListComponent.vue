@@ -1,9 +1,12 @@
 <template>
   <div>
-    <form>
+    <div class="inputts">
       <input type="text" v-model="newTask.task" placeholder="Enter task" />
-      <button @click.prevent="addTask()">Add</button>
-    </form>
+      <button class="addBtn" @click.prevent="addTask()">Add</button>
+    </div>
+
+    <br /><br />
+
     <table>
       <tr>
         <th>Status</th>
@@ -11,27 +14,88 @@
         <th>Action</th>
       </tr>
       <tr v-for="todo in todos" :key="todo.id">
-        <td>todo</td>
+        <td><input type="checkbox" /></td>
         <td>{{ todo.task }}</td>
         <td>
-          <button @click="editTask(todo.id)">Edit</button>
-          <button @click="removeTask(todo.id)">Delete</button>
+          <button class="editBtn" @click="editTask(todo.id)">Edit</button>
+          <button class="deleteBtn" @click="removeTask(todo.id)">Delete</button>
         </td>
       </tr>
     </table>
+
+    <br />
+    <br />
+    <hr />
+    <p>&copy;2023</p>
   </div>
 </template>
 
-<style scoped>
-th,
-td {
-  border: 1px solid black;
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-form {
-  width: 50%;
-  height: 100px;
-  display: inline;
+p {
+  text-align: center;
+}
+.inputts {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 80%;
+  height: 2rem;
+  border-radius: 20px;
+  padding-left: 10px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.addBtn {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  height: 2rem;
+  width: 20%;
+}
+
+.editBtn {
+  border: none;
+  border-radius: 25px;
+  height: 1.5rem;
+  width: 90px;
+  background-color: rgb(23, 93, 168);
+  color: white;
+  margin-bottom: 5px;
+}
+
+.deleteBtn {
+  border: none;
+  border-radius: 25px;
+  height: 1.5rem;
+  width: 90px;
+  background-color: red;
+  color: white;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px;
+}
+th,
+td {
+  border: 2px solid rgb(214, 210, 210);
+  padding: 10px;
+}
+
+th {
+  border-bottom: solid 10px black;
 }
 </style>
 

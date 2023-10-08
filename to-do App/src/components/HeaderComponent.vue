@@ -1,14 +1,17 @@
 <template>
-  <div>
-    <header>
-      <h1>Todo-App</h1>
-    </header>
+  <div class="headertd">
+    <h1>Todo-App</h1>
   </div>
 </template>
 
-<style scoped>
-header {
-  width: 50%;
-  margin: auto;
+<style>
+.header {
+  text-align: center;
+}
+h1 {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  text-align: center;
 }
 </style>
