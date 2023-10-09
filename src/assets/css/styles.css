@@ -1,0 +1,61 @@
+      body{
+        height: 100vh;
+        text-align: center;
+        margin: 10%;
+        background-color: rgb(233, 228, 228);
+      }
+
+      h2{
+        color: rgb(157, 155, 155);
+      }
+
+      table{
+        background-color: white;
+        border-radius: 15px;
+        width: 100%;
+        margin-top: 20px;
+        padding: 5px;
+      }
+      td{
+        border-bottom: 1px solid rgb(189, 186, 186); 
+      }
+
+      input{
+        width: 85%;
+        height: 1.5rem;
+        padding-left: 5px;
+        border-radius: 5rem;
+        border: none;
+      }
+      .editBtn{
+        background-color: green;
+        height: 1.5rem;
+        width: 6rem;
+        border: none;
+        border-radius: 3rem;
+        color: white;
+      }
+      
+      .deleteBtn{
+        background-color: green;
+        height: 1.5rem;
+        width: 6rem;
+        border: none;
+        border-radius: 3rem;
+        color: white;
+        margin-left: 0.5rem;
+      }
+      .addBtn{
+        background-color: rgb(199, 5, 31);
+        height: 1.5rem;
+        width: 6rem;
+        border: 2px rgb(199, 5, 31) solid;
+        border-radius: 3rem;
+        color: rgb(255, 255, 255);
+        margin-left: 1rem;  
+      }
+      .addBtn:active{
+        opacity: 0.7;
+        font-weight: bolder;
+        border: white 2px solid;
+      }
