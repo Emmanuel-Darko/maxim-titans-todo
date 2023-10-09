@@ -23,8 +23,8 @@
             </td>
             <td>{{ item.items }}</td>
             <td>
-              <button @click="editItem(item.id)">Edit</button>
-              <button @click="removeItem()">Delete</button>
+              <button class="edit-btn" @click="editItem(item.id)">Edit</button>
+              <button class="delete-btn" @click="removeItem()">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -54,6 +54,9 @@
   height: 2.3rem;
   width: 4rem;
   font-weight: bold;
+  background-color: black;
+  color: white;
+  margin-left: 5px;
 }
 h1,
 h2 {
@@ -78,15 +81,25 @@ h2 {
 th,
 td {
   border: 1px solid black;
-  height: 30px;
+  height: 25px;
   padding: 10px;
   text-align: center;
 }
 
 tr td button {
   width: 4rem;
-  height: 3rem;
+  height: 2rem;
   cursor: pointer;
+  border-radius: 10px;
+}
+
+.edit-btn {
+  margin-right: 5px;
+  background-color: black;
+  color: white;
+}
+.delete-btn {
+  background-color: white;
 }
 </style>
 
