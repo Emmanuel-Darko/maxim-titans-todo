@@ -72,6 +72,7 @@ export default {
     },
     doneToDo(todo) {
       todo.done = !todo.done
+      localStorage.setItem('ToDoListItems', JSON.stringify(this.items))
     },
     editItem(id) {
       this.editing = true
