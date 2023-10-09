@@ -2,14 +2,15 @@
   <div class="content">
     <div>
       <h1>My TO-DO</h1>
+    </div>
+
+    <div class="table-content">
       <div class="inputField">
         <input class="input" v-model="taskData.items" type="text" placeholder="Enter items" />
         <input type="submit" class="submit-button" @click.prevent="saveData()" :value="btnTitle" />
       </div>
-    </div>
-    <div class="table-content">
       <h2>Items On The List</h2>
-      <table>
+      <table class="table">
         <thead>
           <th>Status</th>
           <th>Task</th>
@@ -40,6 +41,11 @@
   flex-direction: column;
   align-items: center;
 }
+
+.inputField {
+  margin: 0;
+  padding-top: 10px;
+}
 .input {
   width: 15rem;
   height: 2rem;
@@ -52,6 +58,21 @@
 h1,
 h2 {
   text-align: center;
+}
+h2 {
+  margin-top: 30px;
+  padding: 0;
+}
+
+.table-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 5px;
+}
+
+.table {
+  margin-bottom: 20px;
 }
 
 th,
